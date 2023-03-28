@@ -1,13 +1,258 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --color-131921: #131921;
+  --color-3b4149: #3b4149;
+  --color-febd69: #febd69;
+  --color-232f3e: #232f3e;
+  --color-bf4800: #bf4800;
+  --color-f5f5f7: #f5f5f7;
+  --color-ededed: #ededed;
+  --color-777777: #777777;
+  --color-1c1c1b: #1c1c1b;
+}
+
+/* font-family: 'Playfair Display', serif;
+font-family: 'Poppins', sans-serif; */
+
+/* Navbar CSS */
+
+.navbar {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--color-3b4149) !important;
+  background-color: var(--color-232f3e) !important;
+  padding: 1.9rem;
+}
+
+.navbar-collapse {
+  padding-top: 10px;
+}
+
+.navbar-toggler-icon {
+  color: white !important;
+}
+
+.nav-link {
+  font-weight: 300 !important;
+}
+
+.nav-item a {
+  color: white !important;
+  line-height: 20px;
+}
+
+.nav-item a:hover {
+  border-bottom: 1px solid var(--color-bf4800) !important;
+}
+
+.active {
+  border-bottom: 2px solid var(--color-bf4800) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar .dropdown-menu {
+  background-color: var(--color-131921) !important;
+  color: white;
+}
+
+.navbar .dropdown-menu a:hover {
+  background-color: var(--color-232f3e) !important;
+}
+
+/* Footer */
+
+.footer {
+  color: white;
+  padding: 25px;
+  background-color: var(--color-232f3e) !important;
+}
+
+.footer a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: var(--color-bf4800);
+  border-bottom: 1px solid var(--color-bf4800);
+}
+
+/* Page Not Found */
+.pnf {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgba(105, 14, 14, 0.918);
+  border: 1px solid var(--color-232f3e);
+  /* background-color: var(--color-131921); */
+  border-radius: 10px 10px 10px 10px;
+  text-decoration: none;
+  margin-top: 10px;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.pnf-btn:hover {
+  border: 1px solid white;
+  background-color: var(--color-bf4800);
+  color: white;
+}
+
+/* Contact Us About Us Policy */
+.contactus {
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 70vh;
+  flex-direction: column;
+  background-color: var(--color-ededed);
+}
+
+.form-container form {
+  box-shadow: var(--color-232f3e) 0px 5px 10px;
+  padding: 60px;
+  background-color: var(--color-f5f5f7);
+}
+
+.form-container .title {
+  text-align: center;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-family: "Playfair Display", serif;
+  color: var(--color-bf4800);
+}
+
+.form-container input {
+  border: none;
+  border-bottom: 1px solid var(--color-bf4800);
+  border-radius: 0;
+  background-color: transparent !important;
+}
+
+.form-container form button {
+  font-size: 20px;
+  border: 1px solid var(--color-bf4800);
+  border-radius: 10px 10px 10px 10px;
+  color: var(--color-bf4800);
+  background-color: transparent;
+  width: 250px;
+  transition: 0.3s;
+}
+
+.form-container form button:hover {
+  border: 1px solid var(--color-bf4800);
+  background-color: var(--color-bf4800);
+  color: white;
+}
+
+.form-container a {
+  color: rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+}
+
+.form-container a:hover {
+  color: var(--color-bf4800);
+}
+
+.product-link {
+  text-decoration: none;
+  color: #232f3e;
+}
+
+.home-page h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.home-page {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-page .card {
+  width: 18rem;
+}
+
+.home-page .card .card-body button {
+  border: 1px solid var(--color-131921);
+  margin: 2px;
+}
+
+.home-page .card .card-body button:hover {
+  border: 1px solid var(--color-bf4800);
+  background-color: var(--color-bf4800);
+  color: white;
+}
+
+/* ==================
+filters
+============== */
+.filters h4 {
+  margin-top: 100px;
+  color: gray !important;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.337);
+}
+
+.ant-checkbox-wrapper:first-of-type {
+  margin-left: 8px;
+}
+
+.ant-checkbox-wrapper {
+  margin: 2px;
+}
+.ant-radio-wrapper {
+  margin-bottom: 5px !important;
+  margin-left: 10px;
+}
+
+.filters button {
+  background-color: var(--color-131921);
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  margin-top: 20px;
+}
+
+.loadmore {
+  color: var(--color-131921);
+  font-weight: bold;
+  font-size: 20px !important;
 }
